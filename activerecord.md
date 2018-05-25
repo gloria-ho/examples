@@ -1,6 +1,7 @@
 # ActiveRecord
 
 Classes respond to => Table
+
 Instances respond to => Row / Records
 
 ## Define a Table
