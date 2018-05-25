@@ -71,3 +71,24 @@ my_person.cars
 my_person.cars << card.find(..)
 car.create(property1: 'value1', property2: 'value2')
 ```
+
+# Rakefile
+`rake db:create_migration NAME=`name_of_change
+
+## Step 1
+Create the db
+`rake db:create_migration`
+## Step 2
+Define the what the migration is
+```
+def change
+  create_table :todo |t|
+    t.string :name
+    t.string :description
+  end
+end
+```
+## Step 3
+Migrate
+`rake db:migrate`
+
