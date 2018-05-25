@@ -71,4 +71,3 @@ my_person.cars
 my_person.cars << card.find(..)
 car.create(property1: 'value1', property2: 'value2')
 ```
-
