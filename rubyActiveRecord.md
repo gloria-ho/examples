@@ -33,7 +33,7 @@ Instances respond to => Row / Records
 
 ## Deleting
 * `instance.destroy` - deletes the instance
-* `Table.destroy(id_number)` - destorys record by ID number
+* `Table.destroy(id_number)` - destroys record by ID number
 * `Table.destroyall` - destroys every record in the table
 
 ## Relationships
@@ -72,7 +72,8 @@ my_person.cars << card.find(..)
 car.create(property1: 'value1', property2: 'value2')
 ```
 
-# Rakefile
+
+# Rakefile and Creating Tables
 `rake db:create_migration NAME=`name_of_change
 
 ## Step 1
@@ -89,6 +90,43 @@ def change
 end
 ```
 ## Step 3
-Migrate
+Migrate to generate tables in database
 `rake db:migrate`
 
+## Configurations:
+Configure `.yml`
+`config/database.yml`
+```ruby
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  
+development:
+  <<: *defaults
+  database: #DATABSENAME#
+```
+
+## Additional Configurations for Heroku
+Configure `.yml` and create `config.ru` file
+`config/database.yml`
+```ruby
+
+production:
+    <<: *defaults
+    url: ENV['DATABASE_URL']
+```
+`config.ru`
+```ruby
+require './app' # for app.ruby file
+run Sinatra::Application
+```
+Run in the command line:
+```
+git add -A
+git commit -a -m 'commit message'
+heroku create UNIQUE-NAME
+git push heroku master
+
+```
