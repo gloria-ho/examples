@@ -26,7 +26,10 @@ heroku create UNIQUE-NAME
 git push heroku master
 
 ```
-
+Run rake db:migrate to generate tables:
+```
+heroku run rake db:migrate
+```
 
 ## Setting Up (Private) Environment Variables
 On the Heroku website, under app settings, add config vars under KEY and a long, random generated value. [Random key generator](https://randomkeygen.com/)
@@ -35,7 +38,6 @@ On the Heroku website, under app settings, add config vars under KEY and a long,
 ## Heroku Useful Commands in the Command Line
 
 `heroku open` will open the app in your browser
-
 
 To run a command:
 ```
@@ -46,4 +48,6 @@ heroku run #COMMAND-TO-RUN(rake db:migrate)
 
 `heroku restart` command will restart the Heroku Dynos server.
 
-`heroku logs` and `heroku logs -t` will print logs 
+`heroku logs` and `heroku logs -t` will print logs
+
+`heroku destroy` will delete the application
