@@ -13,7 +13,9 @@
 
 ## Programming Design Pattern: MVC *(Model View Controller)*
 **Model:** Interacts with database
+
 **View:** All the erb's, Determine how the pages will be rendered on the screen.
+
 **Controllers:**
 * Process/recieve requests and issue a response
 * Need to work with the models to update/read the database.
