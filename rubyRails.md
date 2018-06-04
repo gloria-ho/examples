@@ -47,6 +47,36 @@ or
 
 * Each resource needs a model and a controller.
 
+## Rails Console
+
+`rails console` or `rails c`
+
+Rails will automatically require.
+
+## Routes
+
+Create a route with the page and direct to the controller.
+
+## Controller
+
+`rails g controller --help`
+
+
+```ruby
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/todos', to: 'todos#index'
+  get '/todos/new', to: 'todos#new'
+  post '/todos/create', to: 'todos#create'
+  get '/todos/edit:id', to: 'todos#edit'
+  put '/todos/edit/:id', to: 'todos#update'
+  delete '/todos/:id', to: 'todos#destroy'
+
+end
+```
+
+
 ## Help
 
 Run `rails new --help`
@@ -264,3 +294,68 @@ Examples:
             Fixtures:   test/fixtures/admin/accounts.yml
             Migration:  db/migrate/XXX_create_admin_accounts.rb
 ```
+
+`rails g controller --help`
+```
+Usage:
+  rails generate controller NAME [action action] [options]
+
+Options:
+      [--skip-namespace], [--no-skip-namespace]  # Skip namespace (affects only isolated applications)
+      [--skip-routes], [--no-skip-routes]        # Don't add routes to config/routes.rb.
+      [--helper], [--no-helper]                  # Indicates when to generate helper
+                                                 # Default: true
+      [--assets], [--no-assets]                  # Indicates when to generate assets
+                                                 # Default: true
+  -e, [--template-engine=NAME]                   # Template engine to be invoked
+                                                 # Default: erb
+  -t, [--test-framework=NAME]                    # Test framework to be invoked
+                                                 # Default: test_unit
+
+Asset options:
+  -j, [--javascripts], [--no-javascripts]       # Generate JavaScripts
+                                                # Default: true
+  -y, [--stylesheets], [--no-stylesheets]       # Generate Stylesheets
+                                                # Default: true
+  -je, [--javascript-engine=JAVASCRIPT_ENGINE]  # Engine for JavaScripts
+                                                # Default: js
+  -se, [--stylesheet-engine=STYLESHEET_ENGINE]  # Engine for Stylesheets
+                                                # Default: scss
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Description:
+    Stubs out a new controller and its views. Pass the controller name, either
+    CamelCased or under_scored, and a list of views as arguments.
+
+    To create a controller within a module, specify the controller name as a
+    path like 'parent_module/controller_name'.
+
+    This generates a controller class in app/controllers and invokes helper,
+    template engine, assets, and test framework generators.
+
+Example:
+    `rails generate controller CreditCards open debit credit close`
+
+    CreditCards controller with URLs like /credit_cards/debit.
+        Controller: app/controllers/credit_cards_controller.rb
+        Test:       test/controllers/credit_cards_controller_test.rb
+        Views:      app/views/credit_cards/debit.html.erb [...]
+        Helper:     app/helpers/credit_cards_helper.rb
+```
+
+## Steps
+
+`rails new app_name [options]`
+`rails db:create`
+`rails start`
+`rails generate model myModel col:type col:type`
+`rails db:migrate`
+`rails console`
+`rails generate controller table`
+create routes
+create `index.html.erb` inside `/views/table/` using the method name.
