@@ -1,8 +1,9 @@
 # Rails
 
+**To create a new app**
 `rails new`
 
-`rails new --help`
+`rails new rails_todos --skip-coffee --skip-action-cable --skip-active-storage --skip-turbolinks --skip-bundle --database=postgresql`
 
 **To start a new server environment:**
 `rails start` or `rails s`
@@ -10,6 +11,17 @@
 **To start database**
 `rails db:create`
 
+## Programming Design Pattern: MVC *(Model View Controller)*
+**Model:** Interacts with database
+**View:** All the erb's, Determine how the pages will be rendered on the screen.
+**Controllers:**
+* Process/recieve requests and issue a response
+* Need to work with the models to update/read the database.
+* Need to work with the views to render our pages.
+
+## Help
+
+Run `rails new --help`
 
 ```
 Usage:
@@ -73,6 +85,3 @@ Example:
 
     This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
 ```
-
-
-`rails new rails_todos --skip-coffee --skip-action-cable --skip-active-storage --skip-turbolinks --skip-bundle --database=postgresql`
