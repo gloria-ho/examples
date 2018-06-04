@@ -75,6 +75,106 @@ Rails.application.routes.draw do
 
 end
 ```
+Results:
+```
+      Prefix Verb   URI Pattern               Controller#Action
+       todos GET    /todos(.:format)          todos#index
+   todos_new GET    /todos/new(.:format)      todos#new
+todos_create POST   /todos/create(.:format)   todos#create
+             GET    /todos/edit:id(.:format)  todos#edit
+             PUT    /todos/edit/:id(.:format) todos#update
+             DELETE /todos/:id(.:format)      todos#destroy
+```
+
+```ruby
+Rails.application.routes.draw do
+
+  resources :todos
+
+end
+```
+Results:
+```
+   Prefix Verb   URI Pattern               Controller#Action
+    todos GET    /todos(.:format)          todos#index
+          POST   /todos(.:format)          todos#create
+ new_todo GET    /todos/new(.:format)      todos#new
+edit_todo GET    /todos/:id/edit(.:format) todos#edit
+     todo GET    /todos/:id(.:format)      todos#show
+          PATCH  /todos/:id(.:format)      todos#update
+          PUT    /todos/:id(.:format)      todos#update
+          DELETE /todos/:id(.:format)      todos#destroy
+```
+
+## Display routes
+`rails routes`
+
+**View Helpers**
+
+*There are built in helpers in rails. You can define your own helpers under the `/helpers/` directory.*
+
+Only availables in `views` and `controllers`:
+* `_path` - gives the path
+* `_url` - gives the entire domain
+
+## Form Helper
+
+`form_for` @instance_name `do |f|`
+html
+`end`
+
+```
+<%= form_for do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :descriptio %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+```
+
+
+## Taking in Parameters
+
+table_name`.create(toto_params)`
+
+**Private parameters**
+```
+  def table_params
+    params.require(:todo).permit(:name, :description)
+  end
+```
+
+## Rendering .erb
+
+When repeating code, you can save the code under the views folder as `_`name`.html.erb`
+
+To render the code, use `<%= render `name` %>` on the .erb page.
+
+## Delete
+
+`<a href="<%= table_path(variable) %>" data-method = "DELETE">`
+
+## Steps
+
+`rails new app_name [options]`
+`rails db:create`
+`rails start`
+`rails generate model myModel col:type col:type`
+`rails db:migrate`
+`rails console`
+`rails generate controller table`
+create routes
+create `index.html.erb` inside `/views/table/` using the method name.
+`rails routes`
 
 
 ## Help
@@ -348,14 +448,66 @@ Example:
         Helper:     app/helpers/credit_cards_helper.rb
 ```
 
-## Steps
+`rails routes`
+```
+Usage:
+  rails new APP_PATH [options]
 
-`rails new app_name [options]`
-`rails db:create`
-`rails start`
-`rails generate model myModel col:type col:type`
-`rails db:migrate`
-`rails console`
-`rails generate controller table`
-create routes
-create `index.html.erb` inside `/views/table/` using the method name.
+Options:
+      [--skip-namespace], [--no-skip-namespace]            # Skip namespace (affects only isolated applications)
+  -r, [--ruby=PATH]                                        # Path to the Ruby binary of your choice
+                                                           # Default: /usr/local/Cellar/ruby/2.5.1/bin/ruby
+  -m, [--template=TEMPLATE]                                # Path to some application template (can be a filesystem path or URL)
+  -d, [--database=DATABASE]                                # Preconfigure for selected database (options: mysql/postgresql/sqlite3/oracle/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                           # Default: sqlite3
+      [--skip-yarn], [--no-skip-yarn]                      # Don't use Yarn for managing JavaScript dependencies
+      [--skip-gemfile], [--no-skip-gemfile]                # Don't create a Gemfile
+  -G, [--skip-git], [--no-skip-git]                        # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                    # Skip source control .keep files
+  -M, [--skip-action-mailer], [--no-skip-action-mailer]    # Skip Action Mailer files
+  -O, [--skip-active-record], [--no-skip-active-record]    # Skip Active Record files
+      [--skip-active-storage], [--no-skip-active-storage]  # Skip Active Storage files
+  -P, [--skip-puma], [--no-skip-puma]                      # Skip Puma related files
+  -C, [--skip-action-cable], [--no-skip-action-cable]      # Skip Action Cable files
+  -S, [--skip-sprockets], [--no-skip-sprockets]            # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                  # Don't install Spring application preloader
+      [--skip-listen], [--no-skip-listen]                  # Don't generate configuration that depends on the listen gem
+      [--skip-coffee], [--no-skip-coffee]                  # Don't use CoffeeScript
+  -J, [--skip-javascript], [--no-skip-javascript]          # Skip JavaScript files
+      [--skip-turbolinks], [--no-skip-turbolinks]          # Skip turbolinks gem
+  -T, [--skip-test], [--no-skip-test]                      # Skip test files
+      [--skip-system-test], [--no-skip-system-test]        # Skip system test files
+      [--skip-bootsnap], [--no-skip-bootsnap]              # Skip bootsnap gem
+      [--dev], [--no-dev]                                  # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                                # Setup the application with Gemfile pointing to Rails repository
+      [--rc=RC]                                            # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                              # Skip loading of extra configuration options from .railsrc file
+      [--api], [--no-api]                                  # Preconfigure smaller stack for API only apps
+  -B, [--skip-bundle], [--no-skip-bundle]                  # Don't run bundle install
+      [--webpack=WEBPACK]                                  # Preconfigure for app-like JavaScript with Webpack (options: react/vue/angular/elm/stimulus)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+```
