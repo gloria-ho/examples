@@ -13,8 +13,13 @@
 
 ## Generate Models
 **To generate**
-`rails generate` or `rails g`
+`rails generate` model_name col_name`:`model_type
 
+or
+
+`rails g` model_name col_name`:`model_type
+
+*Example:*
 `rails g model Todo name:string description:string`
 
 ## Programming Design Pattern: MVC *(Model View Controller)*
