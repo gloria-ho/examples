@@ -1,18 +1,25 @@
 # Rails
 
+
 ## Create a New App
+
 `rails new` [options]
 
 `rails new rails_todos --skip-coffee --skip-action-cable --skip-active-storage --skip-turbolinks --skip-bundle --database=postgresql`
 
 **To start a new server environment:**
+
 `rails start` or `rails s`
 
 **To start database**
+
 `rails db:create`
 
+
 ## Generate Models
+
 **To generate**
+
 `rails generate` model_name col_name`:`model_type
 
 or
@@ -22,7 +29,9 @@ or
 *Example:*
 `rails g model Todo name:string description:string`
 
+
 ## Programming Design Pattern: MVC *(Model View Controller)*
+
 **Model:** Interacts with database
 
 **View:** All the erb's, Determine how the pages will be rendered on the screen.
@@ -33,7 +42,9 @@ or
 * Need to work with the views to render our pages.
 
 ## Resources
+
 *Resources* correspond to tables in our database.
+
 * Each resource needs a model and a controller.
 
 ## Help
@@ -103,7 +114,9 @@ Example:
     This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
 ```
 
+
 `rails g model --help`
+
 ```
 Usage:
   rails generate model NAME [field[:type][:index] field[:type][:index]] [options]
