@@ -191,21 +191,32 @@ To render the code, use `<%= render `name` %>` on the .erb page.
 
 `rails db:create`
 
-`rails start`
+`rails start` or `rails s`
+  * start the local server
 
-`rails generate model myModel col:type col:type`
+`rails generate model myModel col:type col:type` or `rails g model myModel col:type col:type`
+  * create your migration file `/db/` and model class `/app/models/`
 
 `rails db:migrate`
+  * update your databse with the migration
 
 `rails console`
 
-`rails generate controller table`
+`rails generate controller ResourceController/Table_plural` or `rails g controller ResourceController/Table_plural`
+  * create a controller class `/app/controllers/`
 
 create routes
+  * update `/config/routes.rb`
+    * `resourses :todos`
+      or
+    * create `index.html.erb` inside `/views/table/` using the method name.
 
-create `index.html.erb` inside `/views/table/` using the method name.
+check routes: `rails routes`
+  * define the methods on the controller that correspond to the routes created
 
-`rails routes`
+create the `.erb`'s that coresspond to the `GET` methods
+
+write the code
 
 
 ## Scaffold
