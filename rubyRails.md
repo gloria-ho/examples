@@ -207,7 +207,7 @@ To render the code, use `<%= render `name` %>` on the .erb page.
 
 create routes
   * update `/config/routes.rb`
-    * `resourses :todos`
+    * `resources :todos`
       or
     * create `index.html.erb` inside `/views/table/` using the method name.
 
