@@ -5,7 +5,7 @@
 
 `rails new` [options]
 
-`rails new rails_todos --skip-coffee --skip-action-cable --skip-active-storage --skip-turbolinks --skip-bundle --database=postgresql`
+`rails new rails_todos --skip-coffee --skip-action-cable --skip-active-storage --skip-turbolinks --database=postgresql`
 
 **To start a new server environment:**
 
@@ -41,11 +41,13 @@ or
 * Need to work with the models to update/read the database.
 * Need to work with the views to render our pages.
 
+
 ## Resources
 
 *Resources* correspond to tables in our database.
 
 * Each resource needs a model and a controller.
+
 
 ## Rails Console
 
@@ -53,9 +55,11 @@ or
 
 Rails will automatically require.
 
+
 ## Routes
 
 Create a route with the page and direct to the controller.
+
 
 ## Controller
 
@@ -93,6 +97,7 @@ Rails.application.routes.draw do
 
 end
 ```
+
 Results:
 ```
    Prefix Verb   URI Pattern               Controller#Action
@@ -106,7 +111,9 @@ edit_todo GET    /todos/:id/edit(.:format) todos#edit
           DELETE /todos/:id(.:format)      todos#destroy
 ```
 
+
 ## Display routes
+
 `rails routes`
 
 **View Helpers**
@@ -116,6 +123,7 @@ edit_todo GET    /todos/:id/edit(.:format) todos#edit
 Only availables in `views` and `controllers`:
 * `_path` - gives the path
 * `_url` - gives the entire domain
+
 
 ## Form Helper
 
@@ -153,28 +161,52 @@ table_name`.create(toto_params)`
   end
 ```
 
+
 ## Rendering .erb
 
 When repeating code, you can save the code under the views folder as `_`name`.html.erb`
 
 To render the code, use `<%= render `name` %>` on the .erb page.
 
+
 ## Delete
 
-`<a href="<%= table_path(variable) %>" data-method = "DELETE">`
+`<a href="<%= table_path(variable) %>" data-method="DELETE">`
+
+
+## Unobtrusive JavaScript
+
+`data-method="DELETE"`
+
+`data-disable-with="Processing..."`
+
 
 ## Steps
 
 `rails new app_name [options]`
+
 `rails db:create`
+
 `rails start`
+
 `rails generate model myModel col:type col:type`
+
 `rails db:migrate`
+
 `rails console`
+
 `rails generate controller table`
+
 create routes
+
 create `index.html.erb` inside `/views/table/` using the method name.
+
 `rails routes`
+
+
+## Scaffold
+
+`rails g scaffold Post name:string content:text catagory:string`
 
 
 ## Help
