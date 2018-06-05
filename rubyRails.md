@@ -47,6 +47,8 @@ or
 *Resources* correspond to tables in our database.
 
 * Each resource needs a model and a controller.
+  * Each controller needs a subdirectory inside the `views` folder (where subdrectory name matches the controller name).
+    * Each `.erb` file coresponds to the methods/actions on the controller (where `.erb` file name matches the method name).
 
 
 ## Rails Console
@@ -63,8 +65,10 @@ Create a route with the page and direct to the controller.
 
 ## Controller
 
-`rails g controller --help`
+* Every controller needs a sub-directory inside the `views` folder (matching the name of the controller).
 
+
+`rails g controller --help`
 
 ```ruby
 Rails.application.routes.draw do
