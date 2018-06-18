@@ -51,3 +51,20 @@ heroku run #COMMAND-TO-RUN(rake db:migrate)
 `heroku logs` and `heroku logs -t` will print logs
 
 `heroku destroy` will delete the application
+
+
+## Heroku for Rails
+
+1. Run `heroku create `app-name
+
+2. Run the below code:
+```
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/ruby
+```
+
+3. In `config/initializers/devise.rb` around line 11, uncomment and change the `config.secret_key = ENV['SECRET_KEY_BASE']`
+
+3. In `config/environments/production.rb` around line 26, change the `config.assets.js_compressor = Uglifier.new(harmony: true)`
+
+4. Run `heroku run rails db:migrate`
