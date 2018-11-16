@@ -1,125 +1,67 @@
 # Git Basics
 
+`CTRL + a` move text cursor to the beginning of the command line
 
-`CTRL + a`
+`CTRL + e` move text cursor to the end of the command line
 
-move text cursor to the beginning of the command line
+`pwd`print working directory
 
+`cd [/location]` change directory
 
-`CTRL + e`
+`..` up one level from current directory
 
-move text cursor to the end of the command line
+`ls` list all files in current directory
 
-
-`pwd`
-
-print working directory
-
-
-`cd [/location]`
-
-change directory
-
-
-`..`
-
-up one level from current directory
-
-
-`ls`
-
-list all files in current directory
-
-
-`ls -a`
-
-list all files in current directory, including hidden files
-
+`ls -a` list all files in current directory, including hidden files
 
 `ls -l`
 
-
-
 `ls -la`
 
+`touch [file_name]` create a new file within the current path
 
-
-`touch [file_name]`
-
-create a new file within the current path
-
-
-`madir [directory_name]`
-
-create a new directory within the current path
-
+`madir [directory_name]` create a new directory within the current path
 
 
 `mv [orignal_name] [new_name]`
-
 `mv [original_name] /[new_location]`
-
 move or rename file/directory
 
-
 `cp [file_name]`
-
 copy a file
 
-
 `less [file_name]`
-
 show a file
 
-
 `CTRL + C`
-
 kill current running task
 
-
 `head`
-
 see the first lines of a file/log
 
-
 `tail`
-
 see the last lines of a file/log
 
 `tail -f [filename]`
-
 see the last lines of a file/log updating in realtime
 
-
 `cat`
-
 concatenate given files to stdout
 
-
 `echo`
-
 print given text to stdout
 
-
 `>`
-
 `echo "insert this into a file" > [newfile.txt]`
 
-
 `|`
-
 `cat app.py | wc -l`
 
-
 `wc`
-
 word count
 
-
 `CTRL + R`
-
 reverse search commands
-
 
 # Git
 
@@ -163,9 +105,9 @@ set up an alias via the command line
 
 # Vim
 
-[vim-adventures.com]
+(vim-adventures.com)
 
-[vimcommands.github.io]
+(vimcommands.github.io)
 
 
 `ESC`
