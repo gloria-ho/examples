@@ -87,6 +87,12 @@ reverse search commands
 `--no-edit`
 `git log --all --decorate --oneline --graph`
 
+`~/.bashrc`
+set up alias commnds within this file, for example: `alias gst = 'git status'`
+
+`git config --global alias.co checkout`
+set up an alias via the command line
+
 #Vim
 [vim-adventures.com]
 [vimcommands.github.io]
@@ -120,9 +126,3 @@ quit without saving
 
 `x` or `x!` or `wq!`
 quit with saving
-
-`~/.bashrc`
-set up alias commnds within this file, for example: `alias gst = 'git status'`
-
-`git config --global alias.co checkout`
-set up an alias via the command line
