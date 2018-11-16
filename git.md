@@ -1,4 +1,4 @@
-#Git Basics
+# Git Basics
 
 
 `CTRL + a`
@@ -57,7 +57,7 @@ create a new directory within the current path
 
 `mv [orignal_name] [new_name]`
 
-`mv [original_name] [/new_location]`
+`mv [original_name] /[new_location]`
 
 move or rename file/directory
 
@@ -121,7 +121,7 @@ word count
 reverse search commands
 
 
-#Git
+# Git
 
 `git init` initialize git in a directory
 
@@ -161,7 +161,7 @@ set up an alias via the command line
 
 
 
-#Vim
+# Vim
 
 [vim-adventures.com]
 
@@ -215,5 +215,5 @@ quit without saving
 
 
 `x` or `x!` or `wq!`
-
+¡
 quit with saving
