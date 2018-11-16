@@ -21,6 +21,12 @@ list all files in current directory
 `ls -a`
 list all files in current directory, including hidden files
 
+`ls -l`
+
+
+`ls -la`
+
+
 `touch [file_name]`
 create a new file within the current path
 
@@ -93,5 +99,25 @@ find and change all [orignal_word] to [new_word]`g` runs it for the entire file
 
 `:[number]`
 move to line number [number]
+
 `/[pattern]`
 search for [pattern] in the file
+
+hitting `dd` will cuts (deletes and copies) line
+hitting `yy` will copy
+hitting `pp` will paste
+hitting `da` cuts words between ""
+hitting `u` will undo in order
+`CTRL + v` visual block mode for deletion
+
+`.vimrc` for additional configuration 
+
+`:`
+to start typing commands
+
+`q!`
+quit without saving
+
+`x` or `x!` or `wq!`
+quit with saving
+
