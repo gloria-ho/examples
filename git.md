@@ -2,6 +2,7 @@
 
 `CTRL + a`
 move text cursor to the beginning of the command line
+
 `CTRL + e`
 move text cursor to the end of the command line
 
@@ -13,7 +14,6 @@ change directory
 
 `..`
 up a directory
-
 
 `ls`
 list all files in current directory
@@ -123,3 +123,6 @@ quit with saving
 
 `~/.bashrc`
 set up alias commnds within this file, for example: `alias gst = 'git status'`
+
+`git config --global alias.co checkout`
+set up an alias via the command line
