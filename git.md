@@ -121,3 +121,5 @@ quit without saving
 `x` or `x!` or `wq!`
 quit with saving
 
+`~/.bashrc`
+set up alias commnds within this file, for example: `alias gst = 'git status'`
