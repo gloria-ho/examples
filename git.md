@@ -27,29 +27,21 @@
 `mv [original_name] /[new_location]`
 move or rename file/directory
 
-`cp [file_name]`
-copy a file
+`cp [file_name]` copy a file
 
-`less [file_name]`
-show a file
+`less [file_name]` show a file
 
-`CTRL + C`
-kill current running task
+`CTRL + C` kill current running task
 
-`head`
-see the first lines of a file/log
+`head` see the first lines of a file/log
 
-`tail`
-see the last lines of a file/log
+`tail` see the last lines of a file/log
 
-`tail -f [filename]`
-see the last lines of a file/log updating in realtime
+`tail -f [filename]` see the last lines of a file/log updating in realtime
 
-`cat`
-concatenate given files to stdout
+`cat` concatenate given files to stdout
 
-`echo`
-print given text to stdout
+`echo` print given text to stdout
 
 `>`
 `echo "insert this into a file" > [newfile.txt]`
@@ -57,11 +49,9 @@ print given text to stdout
 `|`
 `cat app.py | wc -l`
 
-`wc`
-word count
+`wc` word count
 
-`CTRL + R`
-reverse search commands
+`CTRL + R` reverse search commands
 
 # Git
 
@@ -91,44 +81,26 @@ reverse search commands
 
 `git log --all --decorate --oneline --graph`
 
-
 `~/.bashrc`
 
 set up alias commnds within this file, for example: `alias gst = 'git status'`
-
 
 `git config --global alias.co checkout`
 
 set up an alias via the command line
 
-
-
 # Vim
 
 (vim-adventures.com)
-
 (vimcommands.github.io)
 
+`ESC` to start typing in commands
 
-`ESC`
+`%s/[orignal_word]/[new_word]/g` find and change all [orignal_word] to [new_word]`g` runs it for the entire file
 
-to start typing in commands
+`:[number]` move to line number [number]
 
-
-`%s/[orignal_word]/[new_word]/g`
-
-find and change all [orignal_word] to [new_word]`g` runs it for the entire file
-
-
-`:[number]`
-
-move to line number [number]
-
-
-`/[pattern]`
-
-search for [pattern] in the file
-
+`/[pattern]` search for [pattern] in the file
 
 hitting `dd` will cuts (deletes and copies) line
 
@@ -142,20 +114,14 @@ hitting `u` will undo in order
 
 `CTRL + v` visual block mode for deletion
 
-
 `.vimrc` for additional configuration 
 
-
 `:`
-
 to start typing commands
 
-
 `q!`
-
 quit without saving
 
 
 `x` or `x!` or `wq!`
-¡
 quit with saving
