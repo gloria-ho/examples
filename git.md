@@ -44,14 +44,19 @@ move or rename file/directory
 `echo` print given text to stdout
 
 `>`
+
 `echo "insert this into a file" > [newfile.txt]`
 
 `|`
+
 `cat app.py | wc -l`
 
 `wc` word count
 
 `CTRL + R` reverse search commands
+
+`[command] | grep "[search_term]"` after the command, search for any lines that contain the search_term
+
 
 # Git
 
