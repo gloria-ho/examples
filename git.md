@@ -165,6 +165,7 @@ move or rename file/directory
 ## [Vim](https://www.vim.org/)
 
 [Learn VIM while playing a game](vim-adventures.com)
+
 [Vim Commands](vimcommands.github.io)
 
 `ESC` to start typing in commands
