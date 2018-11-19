@@ -16,7 +16,7 @@ cat app.py | wc -l
 
 `~/.bashrc`
 
-set up alias commnds within this file, for example: `alias gst = 'git status'`
+set up alias commands within this file, for example: `alias gst='git status'`
 
 `git config --global alias.co checkout` set up an alias via the command line
 
