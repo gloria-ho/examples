@@ -18,22 +18,23 @@ alias examples='cd ~/Sites/examples'
 alias algorithms='cd ~/Sites/algorithms'
 
 # git
-alias gadd='git add -A'
+alias gadd-a='git add -A'
 alias gcom-m='git commit -m'
 alias gcom-a='git commit -a -m'
-alias gcominit='git commit -m "initial commit"'
-alias gcomup='git commit -m "updating"'
+alias gcom-i='git commit -m "initial commit"'
+alias gcom-u='git commit -m "updating"'
 alias gpom='git push origin master'
-alias gitignore='code .gitignore'
-alias gitignorenew='touch .gitignore'
+alias gign='code .gitignore'
+alias gign-n='touch .gitignore'
 
-# aliases
+# general aliases
 alias bashrc='code ~/.bashrc'
 alias loadbashrc='source ~/.bashrc'
 alias bashprof='code ~/.bash_profile'
 alias loadbashprof='source ~/.bash_profile'
 alias zshrc='code ~/Sites/examples/.zshrc'
 alias loadzshrc='source ~/Sites/examples/.zshrc'
+alias localspelling='code ~/Library/Spelling/LocalDictionary'
 
 # =============================================================================
 #                                   Functions
